@@ -24,7 +24,7 @@ jobs:
           # Retry all errors, including 404. This option might trigger curl upgrade.
           retry-all: false # Optional, defaults to "false"
       - name: Send mail
-        if: success()
+        if: failure()
         uses: dawidd6/action-send-mail@v3
         with:
           secure: true
@@ -37,7 +37,7 @@ jobs:
           # email subject
           subject: 🔥meetgoogoo API SERVER DOWN! 🔥
           # email body as text
-          body: 🔥 meetgoogoo API SERVER DOWN! 🔥 Please check home laptop is activating.
+          body: 🔥 meetgoogoo API SERVER DOWN! 🔥 Please check server status.
           # comma-separated string, send email to
           to: ${{ secrets.RECEIVER_EMAIL_USERNAME }}
           # from email name
