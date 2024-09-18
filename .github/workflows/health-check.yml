@@ -41,4 +41,4 @@ jobs:
           # comma-separated string, send email to
           to: ${{ secrets.RECEIVER_EMAIL_USERNAME }}
           # from email name
-          from: leeleelee3264-github
+          from: meetgoogoo-github
